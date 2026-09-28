@@ -512,9 +512,9 @@ export function ContactSection() {
                       disabled={loading}
                       shimmerColor="#FFFFFF"
                       background="radial-gradient(ellipse 80% 80% at 50% 120%, rgba(197, 168, 128, 0.95), rgba(26, 25, 24, 1))"
-                      className="w-full py-4 shadow-xl border-gold-400/40 cursor-pointer disabled:opacity-75 disabled:cursor-not-allowed"
+                      className="w-full py-4 shadow-xl border-gold-400/40 cursor-pointer disabled:opacity-75 disabled:cursor-not-allowed flex items-center justify-center"
                     >
-                      <span className="text-sm font-semibold tracking-[0.2em] uppercase flex items-center justify-center gap-2 text-white">
+                      <span className="text-xs sm:text-sm font-semibold tracking-[0.15em] sm:tracking-[0.2em] uppercase flex items-center justify-center gap-2 text-white text-center">
                         {loading ? (
                           <>
                             <RefreshCw className="w-4 h-4 text-gold-300 animate-spin" />
@@ -523,7 +523,7 @@ export function ContactSection() {
                         ) : (
                           <>
                             Submit Inquiry &amp; Check Availability
-                            <Send className="w-4 h-4 text-gold-300" />
+                            <Send className="w-4 h-4 text-gold-300 shrink-0" />
                           </>
                         )}
                       </span>

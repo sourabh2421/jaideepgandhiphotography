@@ -80,7 +80,7 @@ export function Navbar() {
 
       {/* Mobile Drawer */}
       {menuOpen && (
-        <div className="lg:hidden fixed inset-0 top-20 z-40 bg-[#FAF8F5]/98 backdrop-blur-md flex flex-col px-6 py-8 gap-1 overflow-y-auto">
+        <div className="lg:hidden fixed left-0 right-0 bottom-0 z-40 bg-[#FAF8F5]/98 backdrop-blur-md flex flex-col px-6 py-8 gap-1 overflow-y-auto" style={{ top: '80px' }}>
           {navLinks.map((link) => (
             <Link
               key={link.href}
