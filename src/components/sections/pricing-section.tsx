@@ -23,7 +23,7 @@ export function PricingSection() {
 
         {/* Single Clean Pricing Card */}
         <BlurFade delay={0.25}>
-          <div className="relative rounded-3xl p-8 sm:p-12 bg-gradient-to-b from-[#FCFBF9] to-[#FAF7F2] border border-gold-300/80 shadow-xl overflow-hidden">
+          <div className="relative rounded-3xl p-6 sm:p-8 lg:p-12 bg-gradient-to-b from-[#FCFBF9] to-[#FAF7F2] border border-gold-300/80 shadow-xl overflow-hidden">
             <div className="absolute top-0 right-0 transform translate-x-8 -translate-y-8 w-40 h-40 bg-gold-200/30 rounded-full blur-3xl pointer-events-none" />
             <div className="absolute bottom-0 left-0 transform -translate-x-8 translate-y-8 w-40 h-40 bg-gold-200/30 rounded-full blur-3xl pointer-events-none" />
 
@@ -38,8 +38,9 @@ export function PricingSection() {
                 <span className="text-sm sm:text-base font-light uppercase tracking-widest text-charcoal-500 block mb-1">
                   Commission Rate
                 </span>
-                <div className="font-serif text-4xl sm:text-6xl font-bold text-charcoal-900 tracking-tight">
-                  Starting from <span className="text-gold-700">₹40,000</span>
+                <div className="font-serif tracking-tight text-charcoal-900">
+                  <span className="block text-base sm:text-lg font-light text-charcoal-600 mb-1">Starting from</span>
+                  <span className="text-4xl sm:text-6xl font-bold text-gold-700">₹40,000</span>
                   <span className="text-xl sm:text-2xl font-light text-charcoal-500"> / day</span>
                 </div>
               </div>

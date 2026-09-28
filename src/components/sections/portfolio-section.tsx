@@ -184,7 +184,7 @@ export function PortfolioSection() {
 
         {/* Category Filters */}
         <BlurFade delay={0.2}>
-          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12">
+          <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
             {categories.map((cat) => {
               const isActive = activeCategory === cat
               return (
@@ -194,7 +194,7 @@ export function PortfolioSection() {
                     setActiveCategory(cat)
                     setSelectedPhotoIndex(null)
                   }}
-                  className={`px-5 py-2.5 rounded-full text-xs uppercase tracking-[0.18em] font-medium transition-all duration-300 ${
+                  className={`px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-[11px] sm:text-xs uppercase tracking-[0.15em] sm:tracking-[0.18em] font-medium transition-all duration-300 ${
                     isActive
                       ? "bg-charcoal-950 text-white shadow-md shadow-charcoal-950/20 border border-charcoal-950 scale-105"
                       : "bg-white text-charcoal-700 hover:text-gold-700 hover:bg-gold-50/50 border border-gold-200/70"
@@ -208,7 +208,7 @@ export function PortfolioSection() {
         </BlurFade>
 
         {/* Dynamic Gallery Grid (9 images) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8">
           {filteredItems.map((item, idx) => {
             const isPortrait = item.aspect === "portrait"
             const isSquare = item.aspect === "square"
@@ -334,7 +334,7 @@ export function PortfolioSection() {
             className="relative max-w-5xl max-h-[85vh] w-full flex flex-col items-center justify-center"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="relative w-full h-[60vh] sm:h-[72vh] overflow-hidden rounded-xl shadow-2xl border border-white/10">
+            <div className="relative w-full h-[55vh] sm:h-[70vh] overflow-hidden rounded-xl shadow-2xl border border-white/10">
               <Image
                 src={activePhoto.src}
                 alt={activePhoto.title}
@@ -346,8 +346,8 @@ export function PortfolioSection() {
             </div>
 
             {/* Lightbox Caption */}
-            <div className="mt-4 text-center max-w-2xl px-4">
-              <div className="flex items-center justify-center gap-3 text-xs uppercase tracking-[0.2em] text-gold-400 mb-1">
+            <div className="mt-3 sm:mt-4 text-center max-w-2xl px-4">
+              <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-3 text-[10px] sm:text-xs uppercase tracking-[0.15em] sm:tracking-[0.2em] text-gold-400 mb-1">
                 <span>{activePhoto.category}</span>
                 <span>&bull;</span>
                 <span>{activePhoto.location}</span>
@@ -356,10 +356,10 @@ export function PortfolioSection() {
                   {selectedPhotoIndex + 1} of {filteredItems.length}
                 </span>
               </div>
-              <h4 className="font-serif text-xl sm:text-2xl text-white font-normal">
+              <h4 className="font-serif text-lg sm:text-2xl text-white font-normal">
                 {activePhoto.title}
               </h4>
-              <p className="text-ivory-300 text-xs sm:text-sm font-light mt-1.5 leading-relaxed">
+              <p className="text-ivory-300 text-xs sm:text-sm font-light mt-1.5 leading-relaxed line-clamp-2 sm:line-clamp-none">
                 {activePhoto.description}
               </p>
             </div>

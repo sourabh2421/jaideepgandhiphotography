@@ -73,25 +73,25 @@ export function TestimonialsSection() {
           {testimonials.map((item, idx) => (
             <div
               key={idx}
-              className="w-[340px] sm:w-[460px] rounded-2xl border border-gold-200/80 bg-white p-8 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between mx-3.5"
+              className="w-[min(340px,85vw)] sm:w-[420px] rounded-2xl border border-gold-200/80 bg-white p-6 sm:p-8 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between mx-3"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex gap-1 text-gold-500">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-gold-500 text-gold-500" />
+                      <Star key={i} className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-gold-500 text-gold-500" />
                     ))}
                   </div>
-                  <Quote className="w-6 h-6 text-gold-300/60" />
+                  <Quote className="w-5 h-5 sm:w-6 sm:h-6 text-gold-300/60" />
                 </div>
-                <p className="font-serif italic text-charcoal-700 text-base sm:text-lg leading-relaxed font-normal">
+                <p className="font-serif italic text-charcoal-700 text-sm sm:text-base lg:text-lg leading-relaxed font-normal">
                   “{item.quote}”
                 </p>
               </div>
 
-              <div className="mt-8 pt-5 border-t border-gold-100 flex items-center justify-between gap-4">
-                <div className="flex items-center gap-3">
-                  <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-gold-400/60 shrink-0 shadow-sm">
+              <div className="mt-6 pt-5 border-t border-gold-100 flex items-center justify-between gap-3">
+                <div className="flex items-center gap-3 min-w-0">
+                  <div className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden border-2 border-gold-400/60 shrink-0 shadow-sm">
                     <Image
                       src={item.image}
                       alt={item.name}
@@ -99,16 +99,16 @@ export function TestimonialsSection() {
                       className="object-cover"
                     />
                   </div>
-                  <div>
-                    <div className="font-semibold text-charcoal-900 text-sm tracking-wide">
+                  <div className="min-w-0">
+                    <div className="font-semibold text-charcoal-900 text-xs sm:text-sm tracking-wide truncate">
                       {item.name}
                     </div>
-                    <div className="text-xs text-gold-700 font-medium tracking-wider mt-0.5">
+                    <div className="text-[10px] sm:text-xs text-gold-700 font-medium tracking-wider mt-0.5 truncate">
                       {item.location}
                     </div>
                   </div>
                 </div>
-                <span className="text-[10px] uppercase tracking-wider text-charcoal-600 bg-gold-50/80 border border-gold-200/60 px-2.5 py-1 rounded-full shrink-0 font-medium">
+                <span className="text-[9px] sm:text-[10px] uppercase tracking-wider text-charcoal-600 bg-gold-50/80 border border-gold-200/60 px-2 sm:px-2.5 py-1 rounded-full shrink-0 font-medium">
                   {item.event}
                 </span>
               </div>

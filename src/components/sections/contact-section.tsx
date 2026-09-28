@@ -181,11 +181,11 @@ export function ContactSection() {
             <span className="uppercase tracking-[0.25em] text-xs font-semibold text-gold-700">
               Preserve Forever
             </span>
-            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl mt-3 text-charcoal-900 font-medium tracking-tight">
+            <h2 className="font-serif text-2xl sm:text-4xl md:text-5xl lg:text-6xl mt-3 text-charcoal-900 font-medium tracking-tight leading-tight">
               Let’s Craft Your Family Heirloom
             </h2>
             <div className="w-16 h-px bg-gold-400 mx-auto my-6" />
-            <p className="font-serif italic text-xl sm:text-2xl text-charcoal-800 leading-relaxed font-light">
+            <p className="font-serif italic text-base sm:text-xl lg:text-2xl text-charcoal-800 leading-relaxed font-light">
               “Years from now, long after the music has faded and the flowers have dried, your photographs will remain — the timeless testament of your laughter, tears, and enduring love.”
             </p>
             <p className="text-charcoal-600 text-sm sm:text-base mt-4 font-light">
@@ -198,7 +198,7 @@ export function ContactSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
           {/* Left Column: Direct Inquiries & Details */}
           <BlurFade delay={0.2} className="lg:col-span-5 space-y-6">
-            <div className="bg-white p-8 rounded-2xl border border-gold-200/80 shadow-sm">
+            <div className="bg-white p-5 sm:p-8 rounded-2xl border border-gold-200/80 shadow-sm">
               <h3 className="font-serif text-2xl font-semibold text-charcoal-900 mb-3">
                 Need an Immediate Response?
               </h3>
@@ -281,7 +281,7 @@ export function ContactSection() {
 
           {/* Right Column: Lead Capture Form */}
           <BlurFade delay={0.3} className="lg:col-span-7">
-            <div className="bg-white p-8 sm:p-10 rounded-2xl border border-gold-300/80 shadow-lg relative">
+            <div className="bg-white p-5 sm:p-8 lg:p-10 rounded-2xl border border-gold-300/80 shadow-lg relative">
               {submitted ? (
                 <div className="py-12 text-center flex flex-col items-center">
                   <div className="w-16 h-16 rounded-full bg-gold-50 border border-gold-300 flex items-center justify-center mb-5 shadow-inner">

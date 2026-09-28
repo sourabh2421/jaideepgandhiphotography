@@ -82,9 +82,9 @@ export function ServicesSection() {
                 </div>
 
                 {/* Content */}
-                <div className="p-8 flex flex-col justify-between flex-1">
+                <div className="p-5 sm:p-8 flex flex-col justify-between flex-1">
                   <div>
-                    <h3 className="font-serif text-2xl sm:text-3xl font-semibold text-charcoal-900 mb-3 group-hover:text-gold-700 transition-colors">
+                    <h3 className="font-serif text-xl sm:text-2xl lg:text-3xl font-semibold text-charcoal-900 mb-3 group-hover:text-gold-700 transition-colors">
                       {service.title}
                     </h3>
                     <p className="text-charcoal-600 text-sm sm:text-base leading-relaxed font-light">
@@ -92,10 +92,10 @@ export function ServicesSection() {
                     </p>
                   </div>
 
-                  <div className="mt-6 pt-6 border-t border-gold-100 flex items-center justify-between">
+                  <div className="mt-5 sm:mt-6 pt-5 sm:pt-6 border-t border-gold-100 flex items-center justify-between">
                     <a
                       href="#contact"
-                      className="inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.2em] font-semibold text-gold-700 group-hover:text-charcoal-900 transition-colors"
+                      className="inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.15em] sm:tracking-[0.2em] font-semibold text-gold-700 group-hover:text-charcoal-900 transition-colors"
                     >
                       Inquire For Custom Package
                       <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
