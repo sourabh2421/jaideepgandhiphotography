@@ -78,28 +78,30 @@ export function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Drawer */}
+      {/* Mobile Drawer - Full viewport height below navbar */}
       {menuOpen && (
-        <div className="lg:hidden fixed left-0 right-0 bottom-0 z-40 bg-[#FAF8F5]/98 backdrop-blur-md flex flex-col px-6 py-8 gap-1 overflow-y-auto" style={{ top: '80px' }}>
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={() => setMenuOpen(false)}
-              className="py-4 text-base font-semibold uppercase tracking-[0.2em] text-charcoal-800 border-b border-gold-100 hover:text-gold-700 transition-colors"
-            >
-              {link.label}
-            </Link>
-          ))}
-          <div className="mt-6">
-            <Button
-              variant="gold"
-              size="lg"
-              asChild
-              className="w-full font-semibold text-sm tracking-[0.15em] uppercase py-4"
-            >
-              <a href="#contact" onClick={() => setMenuOpen(false)}>Enquire Now</a>
-            </Button>
+        <div className="lg:hidden fixed inset-0 z-40 bg-[#FAF8F5]/98 backdrop-blur-md overflow-y-auto" style={{ top: '80px' }}>
+          <div className="flex flex-col px-6 py-8 gap-1 min-h-full">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setMenuOpen(false)}
+                className="py-4 text-base font-semibold uppercase tracking-[0.2em] text-charcoal-800 border-b border-gold-100 hover:text-gold-700 transition-colors"
+              >
+                {link.label}
+              </Link>
+            ))}
+            <div className="mt-6">
+              <Button
+                variant="gold"
+                size="lg"
+                asChild
+                className="w-full font-semibold text-sm tracking-[0.15em] uppercase py-4"
+              >
+                <a href="#contact" onClick={() => setMenuOpen(false)}>Enquire Now</a>
+              </Button>
+            </div>
           </div>
         </div>
       )}

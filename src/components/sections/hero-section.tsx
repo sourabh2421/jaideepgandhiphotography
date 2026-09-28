@@ -28,7 +28,7 @@ export function HeroSection() {
       </div>
 
       {/* Main Center Content */}
-      <div className="relative z-10 max-w-5xl mx-auto px-6 pt-32 pb-16 flex flex-col items-center flex-1 justify-center">
+      <div className="relative z-10 w-full max-w-5xl mx-auto px-6 pt-32 pb-16 text-center flex flex-col items-center flex-1 justify-center">
         {/* Sub-badge */}
         <BlurFade delay={0.1}>
           <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 rounded-full border border-gold-400/30 bg-gold-950/40 backdrop-blur-md mb-6 shadow-sm max-w-[90vw]">
@@ -41,36 +41,36 @@ export function HeroSection() {
 
         {/* Brand Name */}
         <BlurFade delay={0.2}>
-          <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl tracking-[0.2em] uppercase text-ivory-200 mb-4 font-light text-center">
+          <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl tracking-[0.2em] uppercase text-ivory-200 mb-4 font-light text-center w-full">
             Jaideep Gandhi Photography
           </h1>
         </BlurFade>
 
         {/* Tagline using WordFadeIn */}
-        <div className="w-full flex justify-center">
+        <div className="w-full flex justify-center items-center">
           <WordFadeIn
             words="Capturing Love. Preserving Forever."
-            className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-white max-w-4xl mx-auto leading-[1.15] tracking-tight font-medium drop-shadow-md text-center"
+            className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-white w-full max-w-4xl leading-[1.15] tracking-tight font-medium drop-shadow-md text-center mx-auto"
           />
         </div>
 
         {/* Short Supporting Line */}
-        <BlurFade delay={0.45} className="max-w-2xl mx-auto mt-6 px-2">
-          <p className="text-sm sm:text-base md:text-lg text-ivory-300 font-light leading-relaxed drop-shadow-sm text-center">
+        <BlurFade delay={0.45} className="w-full max-w-2xl mx-auto mt-6 px-2">
+          <p className="text-sm sm:text-base md:text-lg text-ivory-300 font-light leading-relaxed drop-shadow-sm text-center w-full">
             Crafting intimate, timeless visual heirlooms for discerning couples — immortalizing unscripted emotions and grand celebrations into generational art.
           </p>
         </BlurFade>
 
         {/* Primary & Secondary CTAs */}
-        <BlurFade delay={0.6} className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 w-full">
-          <a href="#contact" className="w-full sm:w-auto">
+        <BlurFade delay={0.6} className="mt-10 w-full flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="#contact" className="w-full sm:w-auto max-w-md sm:max-w-none">
             <ShimmerButton
               shimmerColor="#FFFFFF"
               background="#000000"
               hoverBackground="#FFFFFF"
-              className="w-full sm:w-auto px-8 py-4 shadow-2xl border border-white/25 hover:border-white cursor-pointer transition-all duration-500 ease-in-out group"
+              className="w-full sm:w-auto px-6 sm:px-8 py-4 shadow-2xl border border-white/25 hover:border-white cursor-pointer transition-all duration-500 ease-in-out group"
             >
-              <span className="text-sm font-semibold tracking-[0.18em] uppercase flex items-center justify-center gap-2 text-white group-hover:text-black transition-colors duration-500 ease-in-out">
+              <span className="text-xs sm:text-sm font-semibold tracking-[0.15em] sm:tracking-[0.18em] uppercase flex items-center justify-center gap-2 text-white group-hover:text-black transition-colors duration-500 ease-in-out">
                 Check Availability &amp; Get a Quote
                 <ArrowRight className="w-4 h-4 text-white group-hover:text-black transition-all duration-500 ease-in-out group-hover:translate-x-1" />
               </span>
@@ -81,9 +81,9 @@ export function HeroSection() {
             variant="outline"
             size="lg"
             asChild
-            className="w-full sm:w-auto bg-black/60 text-white border border-white/30 hover:bg-white hover:text-black hover:border-white tracking-widest uppercase text-xs h-14 px-8 transition-all duration-500 ease-in-out shadow-lg backdrop-blur-sm"
+            className="w-full sm:w-auto max-w-md sm:max-w-none bg-black/60 text-white border border-white/30 hover:bg-white hover:text-black hover:border-white tracking-widest uppercase text-xs h-14 px-8 transition-all duration-500 ease-in-out shadow-lg backdrop-blur-sm"
           >
-            <a href="#portfolio">View Portfolio</a>
+            <a href="#portfolio" className="flex items-center justify-center">View Portfolio</a>
           </Button>
         </BlurFade>
       </div>
