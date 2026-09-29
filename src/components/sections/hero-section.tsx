@@ -2,8 +2,7 @@ import Image from "next/image"
 import { BlurFade } from "@/components/ui/blur-fade"
 import { WordFadeIn } from "@/components/ui/word-fade-in"
 import { ShimmerButton } from "@/components/ui/shimmer-button"
-import { Button } from "@/components/ui/button"
-import { ArrowRight, Sparkles, ChevronDown } from "lucide-react"
+import { ArrowRight, Sparkles } from "lucide-react"
 
 export function HeroSection() {
   return (
@@ -39,9 +38,9 @@ export function HeroSection() {
           </div>
         </BlurFade>
 
-        {/* Brand Name */}
+        {/* Brand Name - Increased Size */}
         <BlurFade delay={0.2}>
-          <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl tracking-[0.2em] uppercase text-ivory-200 mb-4 font-light text-center w-full">
+          <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-[0.2em] uppercase text-ivory-200 mb-4 font-light text-center w-full">
             Jaideep Gandhi Photography
           </h1>
         </BlurFade>
@@ -61,8 +60,8 @@ export function HeroSection() {
           </p>
         </BlurFade>
 
-        {/* Primary & Secondary CTAs */}
-        <BlurFade delay={0.6} className="mt-10 w-full flex flex-col sm:flex-row items-center justify-center gap-4">
+        {/* Primary CTA Only */}
+        <BlurFade delay={0.6} className="mt-10 w-full flex justify-center">
           <a href="#contact" className="w-full sm:w-auto max-w-md sm:max-w-none">
             <ShimmerButton
               shimmerColor="#FFFFFF"
@@ -76,65 +75,8 @@ export function HeroSection() {
               </span>
             </ShimmerButton>
           </a>
-
-          <Button
-            variant="outline"
-            size="lg"
-            asChild
-            className="w-full sm:w-auto max-w-md sm:max-w-none bg-black/60 text-white border border-white/30 hover:bg-white hover:text-black hover:border-white tracking-widest uppercase text-xs h-14 px-8 transition-all duration-500 ease-in-out shadow-lg backdrop-blur-sm"
-          >
-            <a href="#portfolio" className="flex items-center justify-center">View Portfolio</a>
-          </Button>
         </BlurFade>
       </div>
-
-      {/* Floating Bottom Preview Strip */}
-      <BlurFade delay={0.75} className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 pb-8 w-full">
-        <div className="bg-charcoal-900/80 backdrop-blur-md rounded-2xl border border-gold-400/20 p-4 sm:p-5 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-2xl">
-          {/* Thumbnails of real photos */}
-          <div className="flex items-center gap-3 min-w-0">
-            {/* Show only 4 avatars on mobile to prevent overflow */}
-            <div className="flex -space-x-3 shrink-0">
-              {[
-                { src: "/images/photo-1-bride-portrait.jpg", alt: "Bridal thumbnail" },
-                { src: "/images/photo-9-royal-garden-couple.jpg", alt: "Palace couple thumbnail" },
-                { src: "/images/photo-7-bridal-kundan-glamour.jpg", alt: "Kundan bridal thumbnail" },
-                { src: "/images/photo-3-traditional-couple.jpg", alt: "Ceremony thumbnail" },
-              ].map((img, i) => (
-                <div key={i} className="relative w-9 h-9 sm:w-11 sm:h-11 rounded-full border-2 border-gold-400 overflow-hidden shrink-0">
-                  <Image src={img.src} alt={img.alt} fill className="object-cover" />
-                </div>
-              ))}
-              {/* 2 extra only on sm+ */}
-              {[
-                { src: "/images/photo-2-reception-couple.jpg", alt: "Reception thumbnail" },
-                { src: "/images/photo-4-bride-lotus.jpg", alt: "Lotus bridal thumbnail" },
-              ].map((img, i) => (
-                <div key={i} className="hidden sm:block relative w-11 h-11 rounded-full border-2 border-gold-400 overflow-hidden shrink-0">
-                  <Image src={img.src} alt={img.alt} fill className="object-cover" />
-                </div>
-              ))}
-            </div>
-            <div className="text-left min-w-0">
-              <div className="text-xs font-serif text-ivory-100 font-medium whitespace-nowrap">
-                2,500+ Events Covered
-              </div>
-              <div className="text-[10px] uppercase tracking-[0.15em] text-gold-400 font-light whitespace-nowrap">
-                20 Years of Fine Art
-              </div>
-            </div>
-          </div>
-
-          {/* Quick jump to gallery */}
-          <a
-            href="#portfolio"
-            className="inline-flex items-center gap-1.5 text-[11px] uppercase tracking-[0.2em] font-semibold text-gold-300 hover:text-white transition-colors group shrink-0"
-          >
-            Explore 2026 Archive
-            <ChevronDown className="w-3.5 h-3.5 text-gold-400 group-hover:translate-y-0.5 transition-transform" />
-          </a>
-        </div>
-      </BlurFade>
     </section>
   )
 }
